@@ -1,0 +1,17 @@
+<style>
+    ul li{
+        list-style: none;
+        width: 120%;
+        height: 100px;
+        margin-top:10px;
+        background: linear-gradient(to right, red , blue);
+        background: -webkit-linear-gradient(left, red , blue);
+        text-align: center;
+        line-height: 100px;
+    }
+</style>
+
+
+<ul class="content ub ub-v main">
+    <li ng-repeat="i in [1,1,1,1,1,1,1,1,1,1,1,1,1,1] track by $index" ng-bind="$index" xf-touch-move='{"max":40}'></li>
+</ul>

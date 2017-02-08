@@ -1,0 +1,27 @@
+
+<div ng-controller="fileUpLoaderDemoCtrl">
+
+    <h1>demo</h1>
+
+    <div file-up-loader name="img" style="border: 1px solid #000;width: 200px;height: 30px;"></div>
+
+    <div file-up-loader name="mp3" style="border: 1px solid #000;width: 200px;height: 30px;"></div>
+
+    
+    <img ng-repeat="item in uploadImages" ng-src="{{item}}" style="width: 100%">
+
+    <hr>
+    <h1>主要原理</h1>
+    <p>
+        1.首先通过 fileUpLoader 插件将文件上传到服务器指定目录. <br>
+        2.通过钩子函数完成指定的程序.
+    </p>
+    <hr>
+    <h1>用法</h1>
+    <p>
+        1.元素中引用指令 file-up-loader <br>
+        2.控制器中引用服务 fileUpLoader
+    </p>
+
+</div>
+

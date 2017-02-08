@@ -1,0 +1,29 @@
+<style>
+    .box > li{
+        width: 100vw;
+        height: 100vh;
+    }
+    .box > li:nth-child(1){
+        background-color: #2b542c;
+    }
+    .box > li:nth-child(2){
+        background-color: #8a6d3b;
+    }
+    .box > li:nth-child(3){
+        background-color: #1b6d85;
+    }
+    .box > li:nth-child(4){
+        background-color: #5e5e5e;
+    }
+</style>
+
+
+<div ng-controller="scrollifyDemoCtrl">
+    <ul class="box" scrollify>
+        <li ng-repeat="item in arr">
+            <p>
+                github:https://github.com/lukehaas/Scrollify
+            </p>
+        </li>
+    </ul>
+</div>

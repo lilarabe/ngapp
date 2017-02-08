@@ -1,0 +1,25 @@
+<div ng-controller="wxShareDemoCtrl">
+    <h1>使用方法</h1>
+    <p>
+        1.引用服务 wxShareSet <br>
+        2.这个服务返回的对象中有两个方法：<br>
+        config : 配置微信信息<br>
+        <pre>
+{
+    appId: $scope.wx_config.appId,
+    timestamp: $scope.wx_config.timestamp,
+    nonceStr: $scope.wx_config.nonceStr,
+    signature: $scope.wx_config.signature
+}
+        </pre>
+        set : 配置分享信息
+        <pre>
+{
+    title: 标题,
+    desc: 描述,
+    link:链接,
+    imgUrl: 图片地址
+}
+        </pre>
+    </p>
+</div>

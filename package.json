@@ -1,0 +1,40 @@
+{
+  "name": "ngApp",
+  "version": "1.0.0",
+  "description": "webapp",
+  "homepage": "",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "author": {
+    "name": "da",
+    "email": ""
+  },
+  "license": "",
+  "devDependencies": {
+    "amd-optimize": "^0.6.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-css-spriter": "^0.3.3",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-ng-html2js": "^0.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-svn": "^1.0.6",
+    "gulp-uglify": "^2.0.0",
+    "gulp-webpack": "^1.5.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-jasmine": "^1.1.0",
+    "mockjs": "^1.0.1-beta3",
+    "run-sequence": "^1.2.2",
+    "through2": "^2.0.3"
+  }
+}

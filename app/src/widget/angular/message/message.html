@@ -1,0 +1,10 @@
+<div class="message">
+    <div class="message-box">
+        <h1 class="message-box-h1">系统提示</h1>
+        <p class="message-box-title" ng-bind="msg"></p>
+        <div class="message-box-btns">
+            <div class="message-box-btn" ng-if="okBtn" ng-click="okFn()">确定</div>
+            <div class="message-box-btn" ng-if="confirmBtn" ng-click="confirmFn()">取消</div>
+        </div>
+    </div>
+</div>

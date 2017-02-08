@@ -1,0 +1,6 @@
+
+
+
+<div ng-controller="lazyLoadDemoCtrl">
+    <img ng-repeat="image in images" lazyload data-original="{{ image.src }}" style="width: 100%;height: 200px;">
+</div>

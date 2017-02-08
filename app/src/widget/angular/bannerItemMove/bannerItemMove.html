@@ -1,0 +1,22 @@
+
+
+<div class="bannerItemMove">
+
+    <div class="bannerItemMove-left" ng-click="moveProv()"></div>
+
+    <div class="bannerItemMove-main">
+        <ul class="bannerItemMove-list" ng-style="listStyle">
+            <li ng-repeat="item in images track by $index" >
+                <img ng-src="{{ item.src }}" class="bannerItemMove-img" ng-click="clickFn($event,$index,item.index)">
+            </li>
+        </ul>
+    </div>
+
+    <div class="bannerItemMove-right" ng-click="moveNext()"></div>
+
+</div>
+
+
+
+
+

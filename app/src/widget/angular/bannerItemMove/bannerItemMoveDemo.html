@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/app/src/widget/angular/bannerItemMove/bannerItemMove.css">
+<style>
+	.banner-box-move1 {
+		width: 1200px;
+		height: 200px;
+		background: #EEE;
+		position: absolute;
+		top:20px;
+		left: 200px;
+	}
+</style>
+
+<div class="banner-box-move1" ng-controller="bannerItemMoveCtrl">
+
+	<banner-item-move bannername="demo"></banner-item-move>
+
+</div>
+
+
+
+<div ng-controller="MyCtrl">
+    <h4>Upload on file select</h4>
+    <button type="file" ngf-select="uploadFiles($file, $invalidFiles)"
+            accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
+        Select File</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+

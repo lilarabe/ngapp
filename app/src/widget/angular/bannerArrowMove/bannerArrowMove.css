@@ -1,0 +1,37 @@
+.banner-arrow-move {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.banner-arrow-move-content {
+    height: 100%;
+    overflow: hidden;
+}
+.banner-arrow-move-content > li {
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+.banner-arrow-move-content-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    user-select:none;
+}
+.banner-arrow-move-content-left,  .banner-arrow-move-content-right{
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    cursor: pointer;
+}
+.banner-arrow-move-content-left {
+    left: 30px;
+    background: url("/app/src/widget/angular/bannerArrowMove/images/left.png") no-repeat center;
+    background-size: 100%;
+}
+.banner-arrow-move-content-right {
+    right: 30px;
+    background: url("/app/src/widget/angular/bannerArrowMove/images/right.png") no-repeat center;
+    background-size: 100%;
+}

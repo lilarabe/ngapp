@@ -1,0 +1,11 @@
+<div class="banner-arrow-move">
+	<ul class="banner-arrow-move-content" ng-style="ulStyle">
+		<li ng-repeat="item in images track by $index" ng-style="liStyle">
+			<img
+					class="banner-arrow-move-content-img"
+					ng-src="{{ item.src }}" ng-click="clickFn($index)">
+		</li>
+	</ul>
+	<div class="banner-arrow-move-content-left" ng-style="leftStyle" ng-click="moveNext()"></div>
+	<div class="banner-arrow-move-content-right" ng-style="rightStyle" ng-click="moveProv()"></div>
+</div>
