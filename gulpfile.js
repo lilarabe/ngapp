@@ -32,6 +32,8 @@ var gulp = require('gulp'), /*载入gulp*/
 
     imagemin = require('gulp-imagemin'),/*图片压缩*/
 
+    connect = require('gulp-connect'),/*本地Server服务*/
+
     through2 = require('through2');/*取文件/路径/名/内容*/
 
 
@@ -277,16 +279,21 @@ gulp.task('svn', function () {
 });
 /************************************************************************************************/
 
+//使用connect启动一个Web服务器
+gulp.task('connect', function () {
+    connect.server();
+});
+
 
 /*默认处理*/
 /************************************************************************************************/
 gulp.task('default', function () {
     //gulp.run('css', 'js');
-    runSequence(['getJsPathsObj'],['css', 'js', 'html-prod', 'file-move', 'images-move'], 'svn');
+    runSequence(['getJsPathsObj'],['css', 'js', 'html-prod', 'file-move', 'images-move'], 'svn','connect');
 });
 
 gulp.task('dev', function () {
-    runSequence(['sass','tpl'],['setCssPath'], 'html-dev');
+    runSequence(['sass','tpl'],['setCssPath'], 'html-dev', 'connect');
 });
 /************************************************************************************************/
 

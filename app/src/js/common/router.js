@@ -7,10 +7,10 @@ define(['app'], function ( app ) {
         var v = '?v='+app_global.v;
 
          /*html5 url重写*/
-        $locationProvider.html5Mode({
+        /*$locationProvider.html5Mode({
             enabled: true,
             requireBase: false
-        });
+        });*/
 
          /*默认页面*/
          $urlRouterProvider.otherwise('index');

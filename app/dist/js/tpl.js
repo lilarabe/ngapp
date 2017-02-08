@@ -136,6 +136,23 @@ try {
   module = angular.module('app', []);
 }
 module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('directive/lazyLoadDirective/lazyLoadDemo.html',
+    '\n' +
+    '\n' +
+    '\n' +
+    '<div ng-controller="lazyLoadDemoCtrl">\n' +
+    '    <img ng-repeat="image in images" lazyload data-original="{{ image.src }}" style="width: 100%;height: 200px">\n' +
+    '</div>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app');
+} catch (e) {
+  module = angular.module('app', []);
+}
+module.run(['$templateCache', function($templateCache) {
   $templateCache.put('directive/scrollifyDirective/scrollifyDemo.html',
     '<style>\n' +
     '    .box > li{\n' +
@@ -176,13 +193,40 @@ try {
   module = angular.module('app', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('directive/lazyLoadDirective/lazyLoadDemo.html',
-    '\n' +
-    '\n' +
-    '\n' +
-    '<div ng-controller="lazyLoadDemoCtrl">\n' +
-    '    <img ng-repeat="image in images" lazyload data-original="{{ image.src }}" style="width: 100%;height: 200px">\n' +
+  $templateCache.put('bannerArrowMove/bannerArrowMove.html',
+    '<div class="banner-arrow-move">\n' +
+    '	<ul class="banner-arrow-move-content" ng-style="ulStyle">\n' +
+    '		<li ng-repeat="item in images track by $index" ng-style="liStyle">\n' +
+    '			<img class="banner-arrow-move-content-img" ng-src="{{ item.src }}" ng-click="clickFn($index)">\n' +
+    '		</li>\n' +
+    '	</ul>\n' +
+    '	<div class="banner-arrow-move-content-left" ng-style="leftStyle" ng-click="moveNext()"></div>\n' +
+    '	<div class="banner-arrow-move-content-right" ng-style="rightStyle" ng-click="moveProv()"></div>\n' +
     '</div>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app');
+} catch (e) {
+  module = angular.module('app', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('bannerArrowMove/bannerArrowMoveDemo.html',
+    '\n' +
+    '<link rel="stylesheet" href="/app/src/widget/angular/bannerArrowMove/bannerArrowMove.css">\n' +
+    '\n' +
+    '<div style="width: 800px; height: 300px; border:1px solid #666; background-color: #f0f0f0;margin: 100px" ng-controller="bannerArrowMove">\n' +
+    '\n' +
+    '	<banner-arrow-move bannername="bannerArrow"></banner-arrow-move>\n' +
+    '\n' +
+    '</div>\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '');
 }]);
 })();
 
@@ -260,50 +304,6 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '\n' +
     '\n' +
-    '\n' +
-    '\n' +
-    '\n' +
-    '\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app');
-} catch (e) {
-  module = angular.module('app', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('bannerArrowMove/bannerArrowMove.html',
-    '<div class="banner-arrow-move">\n' +
-    '	<ul class="banner-arrow-move-content" ng-style="ulStyle">\n' +
-    '		<li ng-repeat="item in images track by $index" ng-style="liStyle">\n' +
-    '			<img class="banner-arrow-move-content-img" ng-src="{{ item.src }}" ng-click="clickFn($index)">\n' +
-    '		</li>\n' +
-    '	</ul>\n' +
-    '	<div class="banner-arrow-move-content-left" ng-style="leftStyle" ng-click="moveNext()"></div>\n' +
-    '	<div class="banner-arrow-move-content-right" ng-style="rightStyle" ng-click="moveProv()"></div>\n' +
-    '</div>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app');
-} catch (e) {
-  module = angular.module('app', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('bannerArrowMove/bannerArrowMoveDemo.html',
-    '\n' +
-    '<link rel="stylesheet" href="/app/src/widget/angular/bannerArrowMove/bannerArrowMove.css">\n' +
-    '\n' +
-    '<div style="width: 800px; height: 300px; border:1px solid #666; background-color: #f0f0f0;margin: 100px" ng-controller="bannerArrowMove">\n' +
-    '\n' +
-    '	<banner-arrow-move bannername="bannerArrow"></banner-arrow-move>\n' +
-    '\n' +
-    '</div>\n' +
     '\n' +
     '\n' +
     '\n' +
